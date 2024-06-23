@@ -38,7 +38,6 @@
 - Set up Docker on the EC2 instance:
     
     ```bash
-    
     sudo apt-get update
     sudo apt-get install docker.io -y
     sudo usermod -aG docker $USER  # Replace with your system's username, e.g., 'ubuntu'
@@ -75,7 +74,7 @@ docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
 docker run -d -p 8081:80 netflix
 ```
 
-**Phase 2: Security**
+### **Phase 2: Security**
 
 1. **Install SonarQube and Trivy:**
     - Install SonarQube and Trivy on the EC2 instance to scan for vulnerabilities.
