@@ -102,6 +102,10 @@ docker run -d -p 8081:80 netflix
         ```
         trivy image <imageid>
         ```
+        to scan directory using trivy
+        ```
+        trivy fs .
+        ```
         
         
 2. **Integrate SonarQube and Configure:**
