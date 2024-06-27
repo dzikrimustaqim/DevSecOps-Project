@@ -328,7 +328,7 @@ pipeline{
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
-                       sh "docker build --build-arg TMDB_V3_API_KEY=<yourapikey> -t netflix ."
+                       sh "docker build --build-arg TMDB_V3_API_KEY=9d092686b522d8733aae42c4dab66e30 -t netflix ."
                        sh "docker tag netflix dzikrimustaqim/netflix:app "
                        sh "docker push dzikrimustaqim/netflix:app "
                     }
@@ -351,7 +351,7 @@ pipeline{
 ```
 
 
-If you get docker login failed errorr
+If you get docker login failed error
 
 sudo su
 sudo usermod -aG docker jenkins
