@@ -18,7 +18,7 @@
 
 ### **Phase 1: Initial Setup and Deployment**
 
-**Step 1: Launch EC2 (Ubuntu 22.04):**
+**Step 1: Launch EC2 (Ubuntu 24.04):**
 
 - Provision an EC2 instance on AWS with Ubuntu 22.04.
 - Connect to the instance using SSH.
@@ -29,7 +29,7 @@
 - Clone your application's code repository onto the EC2 instance:
     
     ```bash
-    git clone https://github.com/N4si/DevSecOps-Project.git
+    git clone https://github.com/dzikrimustaqim/DevSecOps-Project.git
     ```
     
 
@@ -49,7 +49,7 @@
     
     ```bash
     docker build -t netflix .
-    docker run -d --name netflix -p 8081:80 netflix:latest
+    docker run -d --name netflix -p 8081:80 netflix:app
     
     #to delete
     docker stop <containerid>
