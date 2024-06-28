@@ -48,8 +48,8 @@
 - Build and run your application using Docker containers:
     
     ```bash
-    docker build -t netflix .
-    docker run -d --name netflix -p 8081:80 netflix:app
+    docker build -t netflix:app .
+    docker run -d -p 8081:80 netflix:app netflix
     
     #to delete
     docker stop <containerid>
@@ -70,8 +70,8 @@ It will show an error cause you need API key
 
 Now recreate the Docker image with your api key:
 ```
-docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
-docker run -d -p 8081:80 netflix
+docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix:app .
+docker run -d -p 8081:80 netflix:app netflix
 ```
 
 ### **Phase 2: Security**
